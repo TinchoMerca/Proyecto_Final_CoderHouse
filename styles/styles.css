@@ -11,103 +11,129 @@
 
 
                     /* HEADER */
-
-
-
-header {
+/* Header */
+.navbar {
     height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fafafa;
-    padding: 12px 30px;
-    box-shadow: 0 5px 8px #6b69696e;
-    position: fixed; 
-    width: 100%;                  
-    z-index: 1000;                /*queda encima del contenido*/
+    padding: 0.5rem 1rem;
 }
 
-/* LOGO */
-
-.logo {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 0 60px;    
-    overflow: hidden;
-    box-shadow: 0 0 5px #000000aa;
-    transition: transform 0.2s ease;       
-
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
+/* Logo */
+.navbar-brand img {
     object-fit: cover;
-} 
-
-.logo:hover {
-    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+.navbar-brand img:hover {
+    transform: scale(1.08);
 }
 
-/* NAVEGACIÓN */
-.barra-navegacion ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+/* Links */
+.navbar-nav .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    transition: color 0.2s, transform 0.2s;
 }
 
-.barra-navegacion li {
-    margin: 10px 15px;
+.nav-item{
+    padding: 0.8rem;
 }
 
-.barra-navegacion a {
-    display: block;
-    width: 150px;
-    padding: 10px 0;
-    text-decoration: none;
-    background-color:#000000ee ;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 10px #00000066;
-    font-size: 15px;
-    text-shadow: 0 0 5px #ffffff86;
-    transition: transform 0.2s ease;       
+/* Algunas animaciones en los links del navbar */
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.barra-navegacion a:hover{
-    transform: scale(1.15);
-    background-color: #fff;
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
     color: #000;
-    border: 1px solid #000;
-} 
+}
 
-/* BOTON RESERVA */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
 
-.boton-reserva {
-    margin: 0 60px;
-    padding: 15px 24px;
+/* Botón reservar */
+.btn-success {
     background-color: #24ae7e;
-    border-radius: 5px;
-    color: #ffffff;
-    text-decoration: none;
-    box-shadow: 0 0 10px #24ae7e;
-    transition: transform 0.2s ease;        
+    border-color: #24ae7e;
+}
+.btn-success:hover {
+    background-color: #1e8f67;
+    border-color: #1e8f67;
 }
 
-.boton-reserva:hover {
-    transform: scale(1.2);
-    background-color: #24ae7ebe;
+/* Menú mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        border-radius: 0 0 12px 12px;
+    }
+
+    .navbar-collapse .nav-link {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .navbar-collapse .nav-link:hover {
+        background: #f8f9fa;
+        color: #24ae7e;
+    }
+
+    .navbar-collapse {
+            position: absolute;
+            top: 80px; /* altura del navbar */
+            left: 0;
+            width: 100%;
+            background: #fff;
+            padding: 1rem;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
+            z-index: 999;
+        }
+
+    /* Eliminar efectos hover en mobile */
+    .navbar-collapse .nav-link:hover,
+    .navbar-collapse .nav-link::after {
+        background: none !important;
+        color: #333 !important;
+        width: auto;
+    }
+
+    /* Links dentro del menu hamburguesa */
+    .navbar-collapse .nav-link {
+    font-size: 0.9rem;   /* más chico */
+    padding: 8px 10px;   /* menos espacio arriba/abajo */
+    }
+
+    .navbar-collapse .nav-item {
+    padding: 0.3rem 0;   /* menos separación entre items */
+    }
+
 }
+
 
 
 
                     /* MAIN  (darle margin o margin top para que el header que esta  fijo no tape contenido) */
+
 
 
 
