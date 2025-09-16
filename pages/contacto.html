@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,10 @@
     <title>Contacto - Un Rincón De Lourdes - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
@@ -49,33 +53,67 @@
 
     </main>
 
-    <footer>
-        <section class="pie">
-            <div class="footer-menu">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./departamentos.html">Departamentos</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
+    <footer class="bg-light border-top">
+        <div class="container">
+            <div class="row align-items-center py-3">
+
+                <!-- LEFT: mini menú -->
+                <div class="col-4 d-flex align-items-center">
+                    <ul class="nav flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="./departamentos.html">DEPARTAMENTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-2" href="./contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CENTER: logo -->
+                <div class="col-4 d-flex justify-content-center">
+                    <a href="../index.html" class="d-inline-block footer-logo" aria-label="Ir al inicio">
+                        <img src="../img/logo.png" alt="Un Rincón De Lourdes - Logo" width="64" height="64"
+                            class="rounded-circle shadow-sm">
+                    </a>
+                </div>
+
+                <!-- RIGHT: redes sociales -->
+                <div class="col-4 d-flex justify-content-end">
+                    <div class="social-icons d-flex flex-row flex-sm-row flex-column align-items-center">
+                        <a class="social-link facebook" href="https://www.facebook.com/unrincondelourdes"
+                            aria-label="Facebook" target="_blank" rel="noopener">
+                            <i class="bi bi-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link instagram" href="https://www.instagram.com/unrincondelourdes"
+                            aria-label="Instagram" target="_blank" rel="noopener">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link whatsapp"
+                            href="https://api.whatsapp.com/send/?phone=5492604633049&text&type=phone_number&app_absent=0"
+                            aria-label="WhatsApp" target="_blank" rel="noopener">
+                            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+                </div>
+
             </div>
 
-            <a class="footer-logo" href="../index.html">
-                <img src="../img/logo.png" alt="logo">
-            </a>
-
-            <div class="footer-social">
-                <a class="borde" href="https://www.facebook.com/unrincondelourdes"><img src="../img/facebook.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/unrincondelourdes"><img src="../img/instagram.png" alt="Instagram"></a>
-                <a class="borde" href="https://api.whatsapp.com/send/?phone=5492604633049&text&type=phone_number&app_absent=0"><img src="../img/whatsapp.png" alt="WhatsApp"></a>
-            </div> 
-        </section>
-
-            <p class="copy">© 2025 Un Rincón de Lourdes - Todos los derechos reservados</p>        
-
+            <!-- copyright -->
+            <div class="row">
+                <div class="col-12 text-center small mt-2">
+                    © 2025 Un Rincón de Lourdes - Todos los derechos reservados
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
