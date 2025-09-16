@@ -509,6 +509,10 @@ section {
     border: 0;
 }
 
+
+
+
+
 /* Botón central tipo tarjeta */
 .boton-chat-centro {
     width: 100%;
@@ -537,7 +541,109 @@ section {
 }
 
 
-/* SECCIÓN RESEÑAS */
+
+
+
+
+
+
+
+    /* SECCIÓN RESEÑAS */
+
+.comentarios {
+    background: #f9f9f9;   /* fondo suave, similar a ubicación */
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-reseñas {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Título */
+.titulo-reseñas {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    color: #1f3b45;
+}
+
+/* Layout de tarjetas */
+.fila-reseñas {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr; /* Mobile: una columna */
+    width: 100%;
+}
+
+/* Tarjetas */
+.tarjeta-reseña {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-reseña:hover {
+    transform: translateY(-5px);
+}
+
+/* Estrellas */
+.estrellas {
+    color: #f1c40f; /* dorado */
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+/* Nombre */
+.nombre-resena {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 6px 0;
+    color: #1f3b45;
+}
+
+/* Texto */
+.texto-resena {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsivo */
+@media (min-width: 600px) {
+    .fila-reseñas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+}
+
+@media (min-width: 900px) {
+    .fila-reseñas {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    }
+}
+
+
+
+
+
+
+
 
 
 
