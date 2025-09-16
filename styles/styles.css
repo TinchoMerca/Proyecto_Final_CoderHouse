@@ -684,12 +684,13 @@ section {
     box-shadow: 0 6px 18px rgba(0,0,0,0.14);
     z-index: 999;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    ;
 }
 .boton-whatsapp img {
     width: 50px;
     height: 50px;
     display: block;
+    transition: transform 0.2s ease
 }
 
 .boton-whatsapp img:hover{
