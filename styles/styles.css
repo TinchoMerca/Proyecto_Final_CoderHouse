@@ -148,8 +148,13 @@ section {
     text-align: center;
 }
 
-            /* SECCIÓN PORTADA */
 
+
+
+
+
+
+            /* SECCIÓN PORTADA */
 .portada {
     position: relative;
     background-image: url(../img/frente.jpg);
@@ -157,7 +162,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh; /* Permite crecer si el contenido lo requiere */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,51 +172,50 @@ section {
 }
 
 /* Oscurece la imagen */
-
 .portada .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #00000070 ;
+    background: #00000070;
     z-index: 1;
 }
 
 /* Contenido */
-
 .contenido-portada {
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 25rem;                  
+    gap: clamp(15em, 5vh, 20em);
+    text-align: center; /* Centra en pantallas chicas */
 }
 
 /* Bloques de texto */
 .texto-arriba h1 {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
 }
-.texto-arriba h2{
+.texto-arriba h2 {
     margin-top: 10px;
     font-style: italic;
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
 }
 
-.texto-abajo p{
+.texto-abajo p {
     margin: 5px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
 
-/* botón */
+/* Botón */
 .boton-portada {
     display: inline-block;
     margin: 15px 0 10px 0;
-    padding: 15px 26px;
-    background: #24ae7e;  
+    padding: 12px 20px;
+    background: #24ae7e;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: bold;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -219,9 +223,45 @@ section {
 
 .boton-portada:hover {
     background: #24ae7ebe;
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 10px #24ae7e;
 }
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .portada {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    .contenido-portada {
+        gap: 15rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .contenido-portada {
+        gap: 15rem;
+    }
+    .boton-portada {
+        width: 100%; /* Que ocupe todo el ancho */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             /* SECCIÓN SERVICIOS */
