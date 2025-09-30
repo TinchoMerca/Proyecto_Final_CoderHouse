@@ -1,0 +1,19 @@
+{
+  "name": "proyecto_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinchoMerca/Proyecto_Final_CoderHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TinchoMerca/Proyecto_Final_CoderHouse/issues"
+  },
+  "homepage": "https://github.com/TinchoMerca/Proyecto_Final_CoderHouse#readme"
+}
