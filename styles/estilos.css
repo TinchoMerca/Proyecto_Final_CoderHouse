@@ -13,20 +13,21 @@
 /* =========================
             HEADER
    ========================= */
-.navbar {
+header .navbar {
   height: 80px;
   padding: 0.5rem 1rem;
 }
-
-.navbar-brand img {
+header .navbar .container .navbar-brand img {
   object-fit: cover;
   transition: transform 0.2s ease;
 }
-.navbar-brand img:hover {
+header .navbar .container .navbar-brand img:hover {
   transform: scale(1.1);
 }
-
-.navbar-nav .nav-link {
+header .navbar .container .navbar-collapse .navbar-nav .nav-item {
+  padding: 0.8rem;
+}
+header .navbar .container .navbar-collapse .navbar-nav .nav-link {
   font-weight: 600;
   text-transform: uppercase;
   padding: 10px 14px;
@@ -34,7 +35,7 @@
   color: #555;
   transition: color 0.3s ease;
 }
-.navbar-nav .nav-link::after {
+header .navbar .container .navbar-collapse .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -44,21 +45,17 @@
   background: #000;
   transition: width 0.3s ease;
 }
-.navbar-nav .nav-link:hover {
+header .navbar .container .navbar-collapse .navbar-nav .nav-link:hover {
   color: #000;
 }
-.navbar-nav .nav-link:hover::after {
+header .navbar .container .navbar-collapse .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
-.navbar-nav .nav-item {
-  padding: 0.8rem;
-}
-
-.btn-success {
+header .navbar .container .navbar-collapse .btn-success {
   background-color: #24ae7e;
   border-color: #24ae7e;
 }
-.btn-success:hover {
+header .navbar .container .navbar-collapse .btn-success:hover {
   background-color: #1e8f67;
   border-color: #1e8f67;
 }
@@ -66,24 +63,13 @@
 /* =========================
             FOOTER
 ========================= */
-.footer {
+footer {
   padding: 1.5rem 0;
   background-color: #fafafa;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.08);
   width: 100%;
 }
-
-img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-img:hover {
-  transform: scale(1.08);
-}
-
-.nav .nav-link {
+footer .container .row .col-4 .nav .nav-item .nav-link {
   color: #333;
   font-weight: 600;
   text-transform: uppercase;
@@ -92,13 +78,36 @@ img:hover {
   border-radius: 0.25rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-.nav .nav-link:hover {
+footer .container .row .col-4 .nav .nav-item .nav-link:hover {
   background-color: #333;
   color: #fff;
   text-decoration: none;
 }
-
-.social-link {
+footer .container .row .col-4 .footer-logo img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+footer .container .row .col-4 .footer-logo img:hover {
+  transform: scale(1.08);
+}
+footer .container .row .col-4 .social-icons .facebook:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #0077ff;
+}
+footer .container .row .col-4 .social-icons .instagram:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #e1306c;
+}
+footer .container .row .col-4 .social-icons .whatsapp:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #25d366;
+}
+footer .container .row .col-4 .social-icons .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -113,22 +122,6 @@ img:hover {
   transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
-.social-icons .facebook:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  color: #0077ff;
-}
-.social-icons .instagram:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  color: #e1306c;
-}
-.social-icons .whatsapp:hover {
-  transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  color: #25d366;
-}
-
 /* =========================
     MAIN
    ========================= */
@@ -136,8 +129,7 @@ main {
   padding: 80px 10px 10px 10px;
   background-color: #fff;
 }
-
-section {
+main section {
   margin-bottom: 20px;
   text-align: center;
 }

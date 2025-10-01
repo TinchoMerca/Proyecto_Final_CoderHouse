@@ -5,65 +5,77 @@
 
 @use "../base" as *;   // accede a variables y mixins
 
+header{
 
-.navbar {
-    height: 80px;
-    padding: 0.5rem 1rem;
-}
+    .navbar{
+        height: 80px;
+        padding: 0.5rem 1rem;
 
-.navbar-brand {
+        .container{
 
-    img {
-        object-fit: cover;
-        transition: transform 0.2s ease;
+            .navbar-brand{
+                img {
+                    object-fit: cover;
+                    transition: transform 0.2s ease;
 
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-}
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .navbar-collapse {
+                
+                .navbar-nav {
+                    
+                    .nav-item {
+                        padding: 0.8rem;
+                    }
 
-.navbar-nav {
-    .nav-link {
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 10px 14px;
-        position: relative;
-        color: #555;
-        transition: color 0.3s ease;
+                    .nav-link {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        padding: 10px 14px;
+                        position: relative;
+                        color: #555;
+                        transition: color 0.3s ease;
 
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 0%;
-            height: 2px;
-            background: #000;
-            transition: width 0.3s ease;
-        }
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: -4px;
+                                width: 0%;
+                                height: 2px;
+                                background: #000;
+                                transition: width 0.3s ease;
+                            }
 
-        &:hover {
-            color: #000;
+                            &:hover {
+                                color: #000;
 
-            &::after {
-                width: 100%;
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+        
+                        }
+                    
+                }
+        
+        .btn-success {
+            background-color: $primary;
+            border-color: $primary;
+                
+            &:hover {
+                background-color: #1e8f67;
+                border-color: #1e8f67;
             }
         }
+
+            }
+
+        }
+
     }
 
-    .nav-item {
-        padding: 0.8rem;
-    }
 }
-
-.btn-success {
-    background-color: $primary;
-    border-color: $primary;
-        
-    &:hover {
-        background-color: #1e8f67;
-        border-color: #1e8f67;
-    }
-}
-
