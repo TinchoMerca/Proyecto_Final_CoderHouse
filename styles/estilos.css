@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* =========================
+    RESET + TIPOGRAFÍA
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =========================
+            HEADER
+   ========================= */
+.navbar {
+  height: 80px;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  position: relative;
+  color: #555;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #000;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-nav .nav-item {
+  padding: 0.8rem;
+}
+
+.btn-success {
+  background-color: #24ae7e;
+  border-color: #24ae7e;
+}
+.btn-success:hover {
+  background-color: #1e8f67;
+  border-color: #1e8f67;
+}
+
+/* =========================
+            FOOTER
+========================= */
+.footer {
+  padding: 1.5rem 0;
+  background-color: #fafafa;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+.footer .footer-logo img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.footer .footer-logo img:hover {
+  transform: scale(1.08);
+}
+.footer .nav .nav-link {
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.footer .nav .nav-link:hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.social-icons .facebook:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #0077ff;
+}
+.social-icons .instagram:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #e1306c;
+}
+.social-icons .whatsapp:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  color: #25d366;
+}
+
+/*# sourceMappingURL=estilos.css.map */
