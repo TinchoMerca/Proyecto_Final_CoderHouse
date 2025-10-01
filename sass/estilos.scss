@@ -1,31 +1,29 @@
 // BASE
-@import "base/reset";
-@import "base/variables";
-@import "base/mixins";
+@use "base";
 
 // LAYOUT
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/main";
 
 // COMPONENTS
-@import "components/buttons";
-@import "components/navbar";
-@import "components/whatsapp";
+@use "components/buttons";
+@use "components/navbar";
+@use "components/whatsapp";
 
 // SECTIONS
-@import "sections/portada";
-@import "sections/servicios";
-@import "sections/departamentos";
-@import "sections/ubicacion";
-@import "sections/reseñas";
-@import "sections/contacto";
-@import "sections/faq";
-@import "sections/galeria";
+@use "sections/portada";
+@use "sections/servicios";
+@use "sections/departamentos";
+@use "sections/ubicacion";
+@use "sections/reseñas";
+@use "sections/contacto";
+@use "sections/faq";
+@use "sections/galeria";
 
 // PAGES
-@import "pages/servicios-page";
-@import "pages/departamentos-page";
+@use "pages/servicios-page";
+@use "pages/departamentos-page";
 
 // UTILS
-@import "utils/mediaqueries";
+@use "utils/mediaqueries";
