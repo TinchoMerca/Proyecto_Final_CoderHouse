@@ -16,12 +16,13 @@
 @use "sections/servicios";
 @use "sections/departamentos";
 @use "sections/ubicacion";
-@use "sections/reseñas";
+@use "sections/resenas";
 @use "sections/contacto";
 @use "sections/faq";
 @use "sections/galeria";
 
 // PAGES
+@use "pages/index-page";
 @use "pages/servicios-page";
 @use "pages/departamentos-page";
 

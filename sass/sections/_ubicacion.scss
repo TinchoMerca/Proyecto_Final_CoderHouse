@@ -1,0 +1,77 @@
+/* =========================
+    UBICACIÓN
+   ========================= */
+
+main {
+
+    .ubicacion {
+        background: #e9f0f3;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+
+        .contenedor-ubicacion {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            box-sizing: border-box;
+
+            .titulo-ubicacion {
+                font-size: 20px;
+                letter-spacing: 1px;
+                text-align: center;
+                margin: 0;
+                font-weight: 700;
+                color: #1f3b45;
+            }
+
+            .mapa {
+                width: 90%;
+                max-width: 880px;
+                height: 320px;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 6px solid #ffffff;
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                }
+            }
+            .boton-chat-centro {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 6px;
+
+                .boton-chat {
+                    text-decoration: none;
+                    padding: 8px 18px;
+                    border-radius: 8px;
+                    border: 2px solid #bfe6ec;
+                    background: #eaf8fb;
+                    color: #0a6167;
+                    font-weight: 700;
+                    font-size: 13px;
+                    box-shadow: 0 1px 0 #0000000d;
+                    transition: transform 0.2s ease;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        background-color: #eaf8fba9;
+                        box-shadow: 0 0 10px #eaf8fb;
+                    }
+                }
+            }
+        }
+    }
+}
