@@ -495,12 +495,12 @@ main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .texto-re
     ESTILOS DE LA PÁGINA INDEX
    ========================= */
 /* =========================
-ESTILOS DE LA PÁGINA DEPARTAMENTOS
+ESTILOS DE LA PÁGINA SERVICIOS
    ========================= */
 /* =========================
             HERO
    ========================= */
-.main-departamentos .hero-departamentos {
+main .hero-departamentos {
   position: relative;
   width: 100%;
   height: 500px;
@@ -510,7 +510,7 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   align-items: center;
   border-radius: 0 0 10px 10px;
 }
-.main-departamentos .hero-departamentos .overlay {
+main .hero-departamentos .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -518,12 +518,12 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   height: 100%;
   background: rgba(0, 0, 0, 0.55);
 }
-.main-departamentos .hero-departamentos .hero-img {
+main .hero-departamentos .hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.main-departamentos .hero-departamentos .hero-title {
+main .hero-departamentos .hero-title {
   position: absolute;
   color: white;
   font-size: 3rem;
@@ -533,6 +533,62 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   text-align: center;
 }
 
+/* =========================
+    PÁGINA SERVICIOS
+   ========================= */
+main .servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+}
+main .servicios-grid .servicio-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .servicios-grid .servicio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+main .servicios-grid .servicio-card .titulo-card {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+}
+main .servicios-grid .servicio-card .galeria-card {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+main .servicios-grid .servicio-card .galeria-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+main .servicios-grid .servicio-card .galeria-card img:hover {
+  transform: scale(1.03);
+}
+main .servicios-grid .servicio-card .dos-columnas {
+  grid-template-columns: repeat(2, 1fr);
+}
+main .servicios-grid .servicio-card .descripcion-card {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* =========================
+ESTILOS DE LA PÁGINA DEPARTAMENTOS
+   ========================= */
 /* =========================
         DEPARTAMENTO
    ========================= */
