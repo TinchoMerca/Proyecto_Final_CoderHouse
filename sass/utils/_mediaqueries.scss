@@ -43,6 +43,9 @@
             }
         }
     }
+    .galeria-departamento img {
+        height: 320px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -69,12 +72,12 @@
     }
 
     .galeria-departamento {
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
     }
 
     .galeria-departamento img {
-        max-width: calc(50% - 10px);
-        height: 240px;
+        width: 90%;
+        height: auto;
     }
 
     .galeria-card img {
