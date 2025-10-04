@@ -804,7 +804,7 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   gap: 10px;
   justify-content: center;
   margin-bottom: 1.5rem;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   max-width: 100%;
   box-sizing: border-box;
 }
@@ -934,7 +934,7 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   .hero-departamentos {
     height: 280px;
   }
-  .hero-departamentos .hero-title {
+  main .hero-departamentos .hero-title {
     font-size: 1.8rem;
   }
   .galeria-card.dos-columnas {
