@@ -1,0 +1,27 @@
+/* =========================
+    BOTÓN CENTRAL DE SERVICIOS
+   ========================= */
+
+
+.boton-central {
+    text-align: center;
+    margin: 40px 0;
+
+    .btn-reservar {
+        display: inline-block;
+        padding: 14px 28px;
+        background: #24ae7e;
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background: #1e8f67;
+            transform: scale(1.1);
+            box-shadow: 0 0 12px #24ae7e;
+        }
+    }
+}
