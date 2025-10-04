@@ -458,67 +458,59 @@ main .ubicacion .contenedor-ubicacion .boton-chat-centro .boton-chat:hover {
 }
 
 /* =========================
-    RESEÑAS
+   SECCIÓN RESEÑAS
    ========================= */
-main .comentarios {
-  background: #f9f9f9;
-  padding: 30px 20px;
-  display: flex;
-  justify-content: center;
-}
-main .comentarios .contenedor-reseñas {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  box-sizing: border-box;
-}
-main .comentarios .contenedor-reseñas .titulo-reseñas {
-  font-size: 20px;
-  letter-spacing: 1px;
+.comentarios {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
   text-align: center;
-  margin: 0;
-  font-weight: 700;
-  color: #1f3b45;
 }
-main .comentarios .contenedor-reseñas .fila-reseñas {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  width: 100%;
+.comentarios .contenedor-reseñas {
+  max-width: 900px;
+  margin: 0 auto;
 }
-main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña:hover {
-  transform: translateY(-5px);
-}
-main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .estrellas {
-  color: #f1c40f;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .nombre-resena {
-  font-size: 16px;
+.comentarios .contenedor-reseñas .titulo-reseñas {
+  font-size: 2rem;
   font-weight: 600;
-  margin: 6px 0;
-  color: #1f3b45;
+  color: #1f3c44;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .texto-resena {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.4;
-  margin: 0;
+.comentarios .contenedor-reseñas .fila-reseñas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+.comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .estrellas {
+  color: #ffd700;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+.comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .nombre-resena {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f3c44;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+.comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .texto-resena {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -879,14 +871,6 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
     height: 250px;
   }
 }
-@media (max-width: 576px) {
-  .seccion-departamentos .contenedor-departamentos {
-    grid-template-columns: 1fr;
-  }
-  .seccion-departamentos .departamento img {
-    height: 220px;
-  }
-}
 @media (max-width: 768px) {
   .portada {
     min-height: auto;
@@ -918,6 +902,23 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   .video-galeria iframe {
     height: 300px;
   }
+  .comentarios {
+    padding: 3rem 1.5rem;
+  }
+  .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña {
+    padding: 1.5rem;
+  }
+  .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .texto-resena {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 576px) {
+  .seccion-departamentos .contenedor-departamentos {
+    grid-template-columns: 1fr;
+  }
+  .seccion-departamentos .departamento img {
+    height: 220px;
+  }
 }
 @media (max-width: 480px) {
   .contenido-portada {
@@ -947,6 +948,21 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   }
   .video-galeria iframe {
     height: 220px;
+  }
+  .comentarios {
+    padding: 2.5rem 1rem;
+  }
+  .comentarios .contenedor-reseñas .titulo-reseñas {
+    font-size: 1.6rem;
+  }
+  .comentarios .contenedor-reseñas .fila-reseñas {
+    gap: 1.5rem;
+  }
+  .comentarios .contenedor-reseñas .tarjeta-reseña .nombre-resena {
+    font-size: 1rem;
+  }
+  .comentarios .contenedor-reseñas .tarjeta-reseña .texto-resena {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 600px) {

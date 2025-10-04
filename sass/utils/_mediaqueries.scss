@@ -3,6 +3,10 @@
 /* =========================
     MEDIA QUERIES
    ========================= */
+
+@use "../base" as *;
+
+
 @media (max-width: 992px) {
     .navbar-collapse {
         background: #fff;
@@ -40,21 +44,6 @@
         }
     }
 }
-
-@media (max-width: 576px) {
-    .seccion-departamentos {
-        .contenedor-departamentos {
-            grid-template-columns: 1fr;
-        }
-
-        .departamento {
-            img {
-                height: 220px;
-            }
-        }
-    }
-}
-
 
 @media (max-width: 768px) {
     .portada {
@@ -95,6 +84,35 @@
     .video-galeria iframe {
         height: 300px;
     }
+
+    .comentarios {
+    padding: 3rem 1.5rem;
+
+        .contenedor-reseñas {
+            .fila-reseñas {
+                .tarjeta-reseña {
+                    padding: 1.5rem;
+                    .texto-resena {
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion-departamentos {
+        .contenedor-departamentos {
+            grid-template-columns: 1fr;
+        }
+
+        .departamento {
+            img {
+                height: 220px;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -133,6 +151,30 @@
 
     .video-galeria iframe {
         height: 220px;
+    }
+
+    .comentarios {
+    padding: 2.5rem 1rem;
+
+        .contenedor-reseñas {
+            .titulo-reseñas {
+                font-size: 1.6rem;
+            }
+
+            .fila-reseñas {
+                gap: 1.5rem;
+            }
+
+            .tarjeta-reseña {
+                .nombre-resena {
+                    font-size: 1rem;
+                }
+
+                .texto-resena {
+                    font-size: 0.9rem;
+                }
+            }
+        }
     }
 }
 
