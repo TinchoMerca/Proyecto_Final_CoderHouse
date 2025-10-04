@@ -325,62 +325,68 @@ main .boton-servicios .boton-a-servicios:hover {
 }
 
 /* =========================
-    DEPARTAMENTOS
+    SECCIÓN DEPARTAMENTOS
    ========================= */
-main .seccion-departamentos {
-  background: #f0f2f5;
-  padding: 40px 20px;
+.seccion-departamentos {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
   text-align: center;
 }
-main .seccion-departamentos .titulo-seccion {
+.seccion-departamentos .titulo-seccion {
   font-size: 2rem;
-  margin-bottom: 40px;
+  font-weight: 600;
+  margin-bottom: 2rem;
   color: #333;
 }
-main .seccion-departamentos .contenedor-departamentos {
-  display: flex;
-  flex-wrap: wrap;
+.seccion-departamentos .contenedor-departamentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
   justify-content: center;
-  gap: 30px;
-  margin-top: 50px;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento {
+.seccion-departamentos .contenedor-departamentos .departamento {
   background: #fff;
   border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento:hover {
+.seccion-departamentos .contenedor-departamentos .departamento:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
-main .seccion-departamentos .contenedor-departamentos .departamento img {
+.seccion-departamentos .contenedor-departamentos .departamento img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento h3 {
-  margin: 10px 0;
-  font-size: 1.2rem;
+.seccion-departamentos .contenedor-departamentos .departamento h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
   color: #222;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 15px;
+.seccion-departamentos .contenedor-departamentos .departamento p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento .btn-card {
+.seccion-departamentos .contenedor-departamentos .departamento .btn-card {
   display: inline-block;
-  padding: 10px 18px;
-  background: #0066cc;
+  background-color: #0d6efd;
   color: #fff;
-  text-decoration: none;
+  padding: 0.6rem 1.4rem;
   border-radius: 6px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
-main .seccion-departamentos .contenedor-departamentos .departamento .btn-card:hover {
-  background: #004c99;
+.seccion-departamentos .contenedor-departamentos .departamento .btn-card:hover {
+  background-color: #0b5ed7;
 }
 
 /* =========================
@@ -844,7 +850,7 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
 /* =========================
     MEDIA QUERIES
    ========================= */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .navbar-collapse {
     background: #fff;
     padding: 1rem;
@@ -865,6 +871,20 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   .navbar-collapse .nav-link:hover {
     background: #f8f9fa;
     color: #24ae7e;
+  }
+  .seccion-departamentos .contenedor-departamentos {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .seccion-departamentos .departamento img {
+    height: 250px;
+  }
+}
+@media (max-width: 576px) {
+  .seccion-departamentos .contenedor-departamentos {
+    grid-template-columns: 1fr;
+  }
+  .seccion-departamentos .departamento img {
+    height: 220px;
   }
 }
 @media (max-width: 768px) {

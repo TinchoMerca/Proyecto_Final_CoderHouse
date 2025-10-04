@@ -3,7 +3,7 @@
 /* =========================
     MEDIA QUERIES
    ========================= */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .navbar-collapse {
         background: #fff;
         padding: 1rem;
@@ -27,7 +27,34 @@
         background: #f8f9fa;
         color: #24ae7e;
     }
+
+    .seccion-departamentos {
+        .contenedor-departamentos {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .departamento {
+            img {
+                height: 250px;
+            }
+        }
+    }
 }
+
+@media (max-width: 576px) {
+    .seccion-departamentos {
+        .contenedor-departamentos {
+            grid-template-columns: 1fr;
+        }
+
+        .departamento {
+            img {
+                height: 220px;
+            }
+        }
+    }
+}
+
 
 @media (max-width: 768px) {
     .portada {
