@@ -1,0 +1,60 @@
+/* =========================
+    FAQ
+   ========================= */
+
+
+main {
+
+    .contacto {
+
+        .faq {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+
+            .titulo-faq {
+                font-size: 1.5rem;
+                color: #1f3b45;
+                margin-bottom: 20px;
+            }
+
+            .contenedor-faq {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+
+                .item-faq {
+                    background: #fff;
+                    padding: 15px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                    text-align: left;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+                        background: #f7fffc;
+
+                        h4 {
+                            color: #1e8f67;
+                        }
+                    }
+
+                    h4 {
+                        color: #24ae7e;
+                        margin-bottom: 8px;
+                        font-size: 1rem;
+                        transition: color 0.3s ease;
+                    }
+
+                    p {
+                        color: #555;
+                        font-size: 0.9rem;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+}

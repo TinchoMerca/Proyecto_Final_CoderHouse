@@ -384,7 +384,7 @@ main .seccion-departamentos .contenedor-departamentos .departamento .btn-card:ho
 }
 
 /* =========================
-    UBICACIÓN
+            UBICACIÓN
    ========================= */
 main .ubicacion {
   background: #e9f0f3;
@@ -513,6 +513,123 @@ main .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña .texto-re
   color: #333;
   line-height: 1.4;
   margin: 0;
+}
+
+/* =========================
+    CONTACTO
+   ========================= */
+main .contacto {
+  background: #f0f2f5;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+main .contacto .contenedor-contacto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+main .contacto .contenedor-contacto .titulo-contacto {
+  font-size: 1.8rem;
+  color: #1f3b45;
+  margin-bottom: 20px;
+  text-align: center;
+  background: #eaf8fb;
+  padding: 12px;
+  border-radius: 8px;
+}
+main .contacto .contenedor-contacto .formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .contacto .contenedor-contacto .formulario-contacto .grupo-input {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+main .contacto .contenedor-contacto .formulario-contacto .grupo-input label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+main .contacto .contenedor-contacto .formulario-contacto .grupo-input input, main .contacto .contenedor-contacto .formulario-contacto .grupo-input textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+main .contacto .contenedor-contacto .formulario-contacto .grupo-input input:focus, main .contacto .contenedor-contacto .formulario-contacto .grupo-input textarea:focus {
+  border-color: #24ae7e;
+  box-shadow: 0 0 6px rgba(36, 174, 126, 0.3137254902);
+}
+main .contacto .contenedor-contacto .formulario-contacto .btn-enviar {
+  background: #24ae7e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+main .contacto .contenedor-contacto .formulario-contacto .btn-enviar:hover {
+  background: #1e8f67;
+  transform: scale(1.05);
+}
+
+/* =========================
+    FAQ
+   ========================= */
+main .contacto .faq {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+main .contacto .faq .titulo-faq {
+  font-size: 1.5rem;
+  color: #1f3b45;
+  margin-bottom: 20px;
+}
+main .contacto .faq .contenedor-faq {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+main .contacto .faq .contenedor-faq .item-faq {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+main .contacto .faq .contenedor-faq .item-faq:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: #f7fffc;
+}
+main .contacto .faq .contenedor-faq .item-faq:hover h4 {
+  color: #1e8f67;
+}
+main .contacto .faq .contenedor-faq .item-faq h4 {
+  color: #24ae7e;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+main .contacto .faq .contenedor-faq .item-faq p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* =========================
