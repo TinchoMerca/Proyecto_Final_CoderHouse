@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* Mixin base para tarjetas */
+@mixin card-style($bg: #fff,
+    $radius: 10px,
+    $padding: 20px,
+    $shadow: 0 2px 6px rgba(0, 0, 0, 0.24),
+    $transition-duration: 0.3s,
+    $hover-translate: -8px,
+    $hover-shadow: 0 8px 20px rgba(0, 0, 0, 0.15)) {
+    
+    background: $bg;
+    border-radius: $radius;
+    padding: $padding;
+    box-shadow: $shadow;
+    text-align: center;
+    transition: transform $transition-duration ease, box-shadow $transition-duration ease;
+
+    &:hover {
+        transform: translateY($hover-translate);
+        box-shadow: $hover-shadow;
+    }
+}

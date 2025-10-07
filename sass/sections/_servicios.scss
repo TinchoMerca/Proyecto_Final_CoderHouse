@@ -2,6 +2,8 @@
     SERVICIOS
    ========================= */
 
+@use "../base/mixins" as mixins;
+
 main {
 
     .seccion-servicios {
@@ -15,17 +17,8 @@ main {
 
         .servicio {
             flex: 1 1 30%;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px #0000003d;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-            &:hover{
-                transform: translateY(-8px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            }
+            @include mixins.card-style();
 
             .titulo-servicio {
                 font-size: 1.4rem;

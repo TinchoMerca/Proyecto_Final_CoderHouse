@@ -3,6 +3,7 @@
    ========================= */
 
 @use "../base" as *;
+@use "../base/mixins" as mixins;
 
 .seccion-departamentos {
     padding: 4rem 2rem;
@@ -26,16 +27,14 @@
         margin: 0 auto;
 
         .departamento {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-            }
+            @include mixins.card-style(
+                $bg: #fff,                         
+                $radius: 10px,                     
+                $padding: 1.5rem,                  
+                $shadow: 0 4px 12px rgba(0, 0, 0, 0.1),  
+                $hover-translate: -5px,            
+                $hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.15)  
+            );
 
             img {
                 width: 100%;

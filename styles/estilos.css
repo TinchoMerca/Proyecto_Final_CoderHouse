@@ -10,6 +10,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Mixin base para tarjetas */
 /* =========================
             HEADER
    ========================= */
@@ -267,9 +268,9 @@ main .seccion-servicios {
 main .seccion-servicios .servicio {
   flex: 1 1 30%;
   background: #fff;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2392156863);
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.24);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -350,8 +351,9 @@ main .boton-servicios .boton-a-servicios:hover {
 .seccion-departamentos .contenedor-departamentos .departamento {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .seccion-departamentos .contenedor-departamentos .departamento:hover {
@@ -458,7 +460,7 @@ main .ubicacion .contenedor-ubicacion .boton-chat-centro .boton-chat:hover {
 }
 
 /* =========================
-   SECCIÓN RESEÑAS
+        SECCIÓN RESEÑAS
    ========================= */
 .comentarios {
   background-color: #f9f9f9;
@@ -485,8 +487,9 @@ main .ubicacion .contenedor-ubicacion .boton-chat-centro .boton-chat:hover {
 .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .comentarios .contenedor-reseñas .fila-reseñas .tarjeta-reseña:hover {

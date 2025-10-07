@@ -1,8 +1,9 @@
 /* =========================
-   SECCIÓN RESEÑAS
+        SECCIÓN RESEÑAS
    ========================= */
 
 @use "../base" as *;
+@use "../base/mixins" as mixins;
 
 .comentarios {
     background-color: #f9f9f9;
@@ -28,16 +29,14 @@
             gap: 2rem;
 
             .tarjeta-reseña {
-                background: #fff;
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-                padding: 2rem;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-                &:hover {
-                    transform: translateY(-4px);
-                    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-                }
+                @include mixins.card-style(
+                    $bg: #fff,
+                    $radius: 12px,
+                    $padding: 2rem,
+                    $shadow: 0 4px 10px rgba(0, 0, 0, 0.08),
+                    $hover-translate: -4px,
+                    $hover-shadow: 0 6px 14px rgba(0, 0, 0, 0.12)
+                );
 
                 .estrellas {
                     color: #ffd700;
