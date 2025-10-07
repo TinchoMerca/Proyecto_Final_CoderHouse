@@ -2,6 +2,9 @@
     CONTACTO
    ========================= */
 
+@use "../base" as *;
+@use "../base/mixins" as mixins;
+
 main {
     .contacto {
         background: #f0f2f5;
@@ -12,10 +15,14 @@ main {
         gap: 40px;
 
         .contenedor-contacto {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 30px;
+            @include card-style(
+                $padding: 30px,
+                $radius: 12px,
+                $shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+                $hover-translate: 0,
+                $hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.08)
+            );
+
             max-width: 600px;
             width: 100%;
 

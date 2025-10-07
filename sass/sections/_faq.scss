@@ -2,6 +2,8 @@
     FAQ
    ========================= */
 
+@use "../base" as *;
+@use "../base/mixins" as mixins;
 
 main {
 
@@ -24,16 +26,18 @@ main {
                 gap: 20px;
 
                 .item-faq {
-                    background: #fff;
-                    padding: 15px;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                    @include card-style(
+                        $bg: #fff,
+                        $radius: 8px,
+                        $padding: 15px,
+                        $shadow: 0 2px 6px rgba(0, 0, 0, 0.05),
+                        $hover-translate: -6px,
+                        $hover-shadow: 0 6px 15px rgba(0, 0, 0, 0.1)
+                    );
+
                     text-align: left;
-                    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 
                     &:hover {
-                        transform: translateY(-6px);
-                        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
                         background: #f7fffc;
 
                         h4 {

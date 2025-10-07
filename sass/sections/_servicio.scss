@@ -2,6 +2,8 @@
     PÁGINA SERVICIOS
    ========================= */
 
+@use "../base" as *;
+@use "../base/mixins" as mixins;
 
 main {
     .servicios-grid {
@@ -13,16 +15,14 @@ main {
         padding: 20px;
 
         .servicio-card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            @include card-style(
+                $radius: 12px,
+                $shadow: 0 2px 8px rgba(0, 0, 0, 0.1),
+                $hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.15)
+            );
 
             &:hover {
                 transform: translateY(-8px) scale(1.02);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
             }
 
             .titulo-card {
