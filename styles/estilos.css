@@ -11,6 +11,22 @@
 }
 
 /* Mixin base para tarjetas */
+.btn-reservar, .btn-enviar, .btn-azul, .btn-celeste, .btn-negro {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-reservar:hover, .btn-enviar:hover, .btn-azul:hover, .btn-celeste:hover, .btn-negro:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
 /* =========================
             HEADER
    ========================= */
@@ -135,28 +151,59 @@ main section {
   text-align: center;
 }
 
-/* =========================
-    BOTÓN CENTRAL DE SERVICIOS
-   ========================= */
-.boton-central {
-  text-align: center;
-  margin: 40px 0;
+.btn-reservar {
+  background-color: #24ae7e;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(36, 174, 126, 0.3);
 }
-.boton-central .btn-reservar {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #24ae7e;
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+.btn-reservar:hover {
+  background-color: rgba(36, 174, 126, 0.8);
+  box-shadow: 0 0 14px #24ae7e;
+  transform: scale(1.15);
 }
-.boton-central .btn-reservar:hover {
-  background: #1e8f67;
-  transform: scale(1.1);
-  box-shadow: 0 0 12px #24ae7e;
+
+.btn-enviar {
+  background-color: #24ae7e;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(36, 174, 126, 0.3);
+}
+.btn-enviar:hover {
+  background-color: rgba(36, 174, 126, 0.8);
+  box-shadow: 0 0 5px #24ae7e;
+  transform: scale(1.01);
+}
+
+.btn-azul {
+  background-color: #0066cc;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
+}
+.btn-azul:hover {
+  background-color: rgba(0, 102, 204, 0.99);
+  box-shadow: 0 0 10px #0066cc;
+  transform: scale(1.05);
+}
+
+.btn-celeste {
+  background-color: #0b5ed7;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(11, 94, 215, 0.3);
+}
+.btn-celeste:hover {
+  background-color: rgba(11, 94, 215, 0.9);
+  box-shadow: 0 0 1px #0b5ed7;
+  transform: scale(1);
+}
+
+.btn-negro {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.3);
+}
+.btn-negro:hover {
+  background-color: rgba(51, 51, 51, 0.99);
+  box-shadow: 0 0 1px #333;
+  transform: scale(1);
 }
 
 /* =========================
@@ -235,23 +282,6 @@ main .portada .contenido-portada .texto-abajo p {
   margin: 5px;
   font-size: clamp(0.9rem, 2.5vw, 1.2rem);
 }
-main .portada .contenido-portada .texto-abajo .boton-portada {
-  display: inline-block;
-  margin: 15px 0 10px 0;
-  padding: 12px 20px;
-  background: #24ae7e;
-  color: white;
-  text-decoration: none;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  font-weight: bold;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-main .portada .contenido-portada .texto-abajo .boton-portada:hover {
-  background: rgba(36, 174, 126, 0.7450980392);
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #24ae7e;
-}
 
 /* =========================
     SERVICIOS
@@ -308,22 +338,6 @@ main .boton-servicios {
   background-color: #eaeaea;
   padding: 30px;
 }
-main .boton-servicios .boton-a-servicios {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #0066cc;
-  box-shadow: 0 0 10px #0066cc;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
-main .boton-servicios .boton-a-servicios:hover {
-  background: #1e78d3;
-  transform: scale(1.2);
-  box-shadow: 0 0 10px #0066cc;
-}
 
 /* =========================
     SECCIÓN DEPARTAMENTOS
@@ -377,19 +391,6 @@ main .boton-servicios .boton-a-servicios:hover {
   color: #666;
   margin-bottom: 1rem;
 }
-.seccion-departamentos .contenedor-departamentos .departamento .btn-card {
-  display: inline-block;
-  background-color: #0d6efd;
-  color: #fff;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-.seccion-departamentos .contenedor-departamentos .departamento .btn-card:hover {
-  background-color: #0b5ed7;
-}
 
 /* =========================
             UBICACIÓN
@@ -440,23 +441,6 @@ main .ubicacion .contenedor-ubicacion .boton-chat-centro {
   display: flex;
   justify-content: center;
   margin-top: 6px;
-}
-main .ubicacion .contenedor-ubicacion .boton-chat-centro .boton-chat {
-  text-decoration: none;
-  padding: 8px 18px;
-  border-radius: 8px;
-  border: 2px solid #bfe6ec;
-  background: #eaf8fb;
-  color: #0a6167;
-  font-weight: 700;
-  font-size: 13px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.0509803922);
-  transition: transform 0.2s ease;
-}
-main .ubicacion .contenedor-ubicacion .boton-chat-centro .boton-chat:hover {
-  transform: scale(1.2);
-  background-color: rgba(234, 248, 251, 0.662745098);
-  box-shadow: 0 0 10px #eaf8fb;
 }
 
 /* =========================
@@ -579,21 +563,6 @@ main .contacto .contenedor-contacto .formulario-contacto .grupo-input input:focu
   border-color: #24ae7e;
   box-shadow: 0 0 6px rgba(36, 174, 126, 0.3137254902);
 }
-main .contacto .contenedor-contacto .formulario-contacto .btn-enviar {
-  background: #24ae7e;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-main .contacto .contenedor-contacto .formulario-contacto .btn-enviar:hover {
-  background: #1e8f67;
-  transform: scale(1.05);
-}
 
 /* =========================
     FAQ
@@ -701,7 +670,7 @@ main .galeria .video-galeria iframe {
     ESTILOS DE LA PÁGINA INDEX
    ========================= */
 /* =========================
-ESTILOS DE LA PÁGINA SERVICIOS
+ESTILOS DE LA PÁGINA DEPARTAMENTOS
    ========================= */
 /* =========================
             HERO
@@ -739,65 +708,6 @@ main .hero-departamentos .hero-title {
   text-align: center;
 }
 
-/* =========================
-    PÁGINA SERVICIOS
-   ========================= */
-main .servicios-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-}
-main .servicios-grid .servicio-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-main .servicios-grid .servicio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-main .servicios-grid .servicio-card:hover {
-  transform: translateY(-8px) scale(1.02);
-}
-main .servicios-grid .servicio-card .titulo-card {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #333;
-  text-transform: uppercase;
-}
-main .servicios-grid .servicio-card .galeria-card {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-main .servicios-grid .servicio-card .galeria-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-main .servicios-grid .servicio-card .galeria-card img:hover {
-  transform: scale(1.03);
-}
-main .servicios-grid .servicio-card .dos-columnas {
-  grid-template-columns: repeat(2, 1fr);
-}
-main .servicios-grid .servicio-card .descripcion-card {
-  font-size: 0.95rem;
-  color: #333;
-  line-height: 1.5;
-}
-
-/* =========================
-ESTILOS DE LA PÁGINA DEPARTAMENTOS
-   ========================= */
 /* =========================
         DEPARTAMENTO
    ========================= */
@@ -862,6 +772,78 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
   background: #003580;
 }
 
+/* =========================
+ESTILOS DE LA PÁGINA SERVICIOS
+   ========================= */
+/* =========================
+    PÁGINA SERVICIOS
+   ========================= */
+main .servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+}
+main .servicios-grid .servicio-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+main .servicios-grid .servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+main .servicios-grid .servicio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+main .servicios-grid .servicio-card .titulo-card {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+}
+main .servicios-grid .servicio-card .galeria-card {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+main .servicios-grid .servicio-card .galeria-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+main .servicios-grid .servicio-card .galeria-card img:hover {
+  transform: scale(1.03);
+}
+main .servicios-grid .servicio-card .dos-columnas {
+  grid-template-columns: repeat(2, 1fr);
+}
+main .servicios-grid .servicio-card .descripcion-card {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+main .boton-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* =========================
+ESTILOS DE LA PÁGINA GALERÍA
+   ========================= */
+/* =========================
+ESTILOS DE LA PÁGINA CONTACTO
+   ========================= */
 /* =========================
     MEDIA QUERIES
    ========================= */

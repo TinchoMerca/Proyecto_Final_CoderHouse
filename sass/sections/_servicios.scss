@@ -55,23 +55,5 @@ main {
         width: 100%;
         background-color: #eaeaea;
         padding: 30px;
-
-        .boton-a-servicios{
-            display: inline-block;
-            padding: 12px 24px;
-            background: #0066cc;
-            box-shadow: 0 0 10px #0066cc;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            transition: transform 0.3s ease;
-
-            &:hover {
-                background: #1e78d3;
-                transform: scale(1.2);
-                box-shadow: 0 0 10px #0066cc;
-            }
-        }
     }
 }

@@ -1,27 +1,40 @@
-/* =========================
-    BOTÓN CENTRAL DE SERVICIOS
-   ========================= */
+// ==========================
+// BOTONES GENERADOS POR BUCLE
+// ==========================
+
+@use "../base/extends" as *;
+@use "../base/variables" as *;
+@use "sass:list";
 
 
-.boton-central {
-    text-align: center;
-    margin: 40px 0;
 
-    .btn-reservar {
-        display: inline-block;
-        padding: 14px 28px;
-        background: #24ae7e;
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: bold;
-        border-radius: 8px;
-        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+// Mapa de colores 
+$botones: (
+    "reservar": ($primary, 1.15, 0 0 14px $primary, rgba($primary, 0.8)),
+    "enviar": ($primary, 1.01, 0 0 5px $primary, rgba($primary, 0.8)),
+    "azul": ($secondary, 1.05, 0 0 10px $secondary, rgba($secondary, 0.99)),
+    "celeste": ($tertiary, 1, 0 0 1px $tertiary, rgba($tertiary, 0.9)),
+    "negro": ($dark, 1, 0 0 1px $dark, rgba($dark, 0.99))
+);
+
+// Genera automáticamente las clases .btn-reservar, .btn-azul, .btn-celeste y .btn-negro
+
+@each $nombre, $valores in $botones {
+    $color: list.nth($valores, 1); // primer valor -> color
+    $scale: list.nth($valores, 2); // segundo valor -> escala
+    $shadow: list.nth($valores, 3); // tercer valor -> escala
+    $background: list.nth($valores, 4); // cuarto valor -> escala
+
+    .btn-#{$nombre} {
+        @extend %btn-base;
+        background-color: $color;
+        color: #fff;
+        box-shadow: 0 0 10px rgba($color, 0.3);
 
         &:hover {
-            background: #1e8f67;
-            transform: scale(1.1);
-            box-shadow: 0 0 12px #24ae7e;
+            background-color: $background;
+            box-shadow: $shadow;
+            transform: scale($scale);
         }
     }
 }

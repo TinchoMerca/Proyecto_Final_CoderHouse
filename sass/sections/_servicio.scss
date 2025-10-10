@@ -61,4 +61,11 @@ main {
             }
         }
     }
+    .boton-central {
+        display: flex;
+        justify-content: center;   
+        align-items: center;       
+        margin: 2rem auto;         
+        text-align: center;        
+    }
 }

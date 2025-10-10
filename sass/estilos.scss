@@ -3,6 +3,7 @@
 @use "base/index";
 @use "base/mixins";
 @use "base/variables";
+@use "base/extends";
 
 // LAYOUT
 @use "layout/header";
@@ -25,8 +26,10 @@
 
 // PAGES
 @use "pages/index-page";
-@use "pages/servicios-page";
 @use "pages/departamentos-page";
+@use "pages/servicios-page";
+@use "pages/galeria-page";
+@use "pages/contacto-page";
 
 // UTILS
 @use "utils/mediaqueries";

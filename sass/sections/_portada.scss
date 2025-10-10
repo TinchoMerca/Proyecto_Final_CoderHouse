@@ -55,26 +55,6 @@ main {
                     margin: 5px;
                     font-size: clamp(0.9rem, 2.5vw, 1.2rem);
                 }
-
-                .boton-portada {
-
-                    display: inline-block;
-                    margin: 15px 0 10px 0;
-                    padding: 12px 20px;
-                    background: #24ae7e;
-                    color: white;
-                    text-decoration: none;
-                    font-size: clamp(1rem, 2.5vw, 1.2rem);
-                    font-weight: bold;
-                    border-radius: 8px;
-                    transition: transform 0.3s ease;
-
-                    &:hover {
-                        background: #24ae7ebe;
-                        transform: scale(1.1);
-                        box-shadow: 0 0 10px #24ae7e;
-                    }
-                }
             }
         }
     }
