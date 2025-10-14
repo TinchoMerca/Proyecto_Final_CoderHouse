@@ -68,6 +68,10 @@ header .navbar .container .navbar-collapse .navbar-nav .nav-link:hover {
 header .navbar .container .navbar-collapse .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
+header .navbar .container .navbar-collapse .navbar-nav .active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
 header .navbar .container .navbar-collapse .btn-success {
   background-color: #24ae7e;
   border-color: #24ae7e;
