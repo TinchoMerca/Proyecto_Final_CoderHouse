@@ -675,7 +675,7 @@ ESTILOS DE LA PÁGINA DEPARTAMENTOS
 /* =========================
             HERO
    ========================= */
-main .hero-departamentos {
+main .hero {
   position: relative;
   width: 100%;
   height: 500px;
@@ -685,7 +685,7 @@ main .hero-departamentos {
   align-items: center;
   border-radius: 0 0 10px 10px;
 }
-main .hero-departamentos .overlay {
+main .hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -693,12 +693,12 @@ main .hero-departamentos .overlay {
   height: 100%;
   background: rgba(0, 0, 0, 0.55);
 }
-main .hero-departamentos .hero-img {
+main .hero .hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main .hero-departamentos .hero-title {
+main .hero .hero-title {
   position: absolute;
   color: white;
   font-size: 3rem;
