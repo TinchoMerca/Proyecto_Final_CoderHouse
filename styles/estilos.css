@@ -1027,5 +1027,8 @@ ESTILOS DE LA PÁGINA CONTACTO
     font-size: 1.4rem;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
 
 /*# sourceMappingURL=estilos.css.map */

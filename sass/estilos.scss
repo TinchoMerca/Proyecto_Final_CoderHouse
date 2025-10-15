@@ -33,3 +33,7 @@
 
 // UTILS
 @use "utils/mediaqueries";
+
+html, body {
+    overflow-x: hidden;
+}
