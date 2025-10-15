@@ -713,8 +713,9 @@ main .hero .hero-title {
    ========================= */
 .main-departamentos .departamento {
   width: 90%;
-  max-width: 1800px;
+  max-width: 1600px;
   margin: 3rem auto;
+  text-align: center;
   background: #fff;
   border-radius: 12px;
   padding: 2rem;
@@ -727,49 +728,36 @@ main .hero .hero-title {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 .main-departamentos .departamento .titulo-departamento {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-size: clamp(1.3rem, 4vw, 2rem);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   color: #333;
-  word-wrap: break-word;
 }
 .main-departamentos .departamento .galeria-departamento {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  margin: 20px auto;
+  gap: 1.5rem;
+  margin: 1.5rem auto;
   max-width: 1200px;
 }
 .main-departamentos .departamento .galeria-departamento img {
   width: 100%;
-  height: 380px;
+  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .main-departamentos .departamento .galeria-departamento img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 .main-departamentos .departamento .descripcion {
   font-size: 1rem;
   color: #555;
   margin-bottom: 1.5rem;
-}
-.main-departamentos .departamento .btn-disponibilidad {
-  display: inline-block;
-  background: #004aad;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.main-departamentos .departamento .btn-disponibilidad:hover {
-  background: #003580;
+  max-width: 800px;
+  margin-inline: auto;
 }
 
 /* =========================
@@ -875,8 +863,10 @@ ESTILOS DE LA PÁGINA CONTACTO
   .seccion-departamentos .departamento img {
     height: 250px;
   }
-  .galeria-departamento img {
-    height: 320px;
+  .main-departamentos .departamento .galeria-departamento img {
+    aspect-ratio: 16/9;
+    height: auto;
+    object-fit: cover;
   }
   .servicio {
     max-width: 280px;
@@ -904,11 +894,14 @@ ESTILOS DE LA PÁGINA CONTACTO
   .imagen-servicio img {
     aspect-ratio: 1/1;
   }
-  .galeria-departamento {
-    grid-template-columns: 1fr;
+  .main-departamentos .departamento {
+    padding: 1.5rem;
   }
-  .galeria-departamento img {
-    width: 90%;
+  .main-departamentos .departamento .galeria-departamento {
+    gap: 1rem;
+  }
+  .main-departamentos .departamento .galeria-departamento img {
+    aspect-ratio: 16/9;
     height: auto;
   }
   .galeria-card img {
@@ -933,6 +926,21 @@ ESTILOS DE LA PÁGINA CONTACTO
   }
   .seccion-departamentos .departamento img {
     height: 220px;
+  }
+  .main-departamentos .departamento {
+    padding: 1.2rem;
+  }
+  .main-departamentos .departamento .galeria-departamento {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .main-departamentos .departamento .galeria-departamento img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
+  .main-departamentos .departamento .descripcion {
+    font-size: 0.95rem;
   }
 }
 @media (max-width: 480px) {

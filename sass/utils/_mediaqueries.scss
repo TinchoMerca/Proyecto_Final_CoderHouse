@@ -42,8 +42,16 @@
         }
     }
 
-    .galeria-departamento img {
-        height: 320px;
+    .main-departamentos {
+        .departamento {
+            .galeria-departamento {
+                img {
+                    aspect-ratio: 16 / 9; // se ven más panorámicas en tablets y móviles
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 
     .servicio {
@@ -79,13 +87,19 @@
         aspect-ratio: 1 / 1;
     }
 
-    .galeria-departamento {
-        grid-template-columns: 1fr;
-    }
+    .main-departamentos {
+        .departamento {
+            padding: 1.5rem;
 
-    .galeria-departamento img {
-        width: 90%;
-        height: auto;
+            .galeria-departamento {
+                gap: 1rem;
+
+                img {
+                    aspect-ratio: 16 / 9; // Cuadradas en pantallas pequeñas
+                    height: auto;
+                }
+            }
+        }
     }
 
     .galeria-card img {
@@ -122,6 +136,27 @@
         .departamento {
             img {
                 height: 220px;
+            }
+        }
+    }
+
+    .main-departamentos {
+        .departamento {
+            padding: 1.2rem;
+
+            .galeria-departamento {
+                grid-template-columns: 1fr; // una sola columna
+                gap: 1rem;
+
+                img {
+                    aspect-ratio: 16 / 9;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .descripcion {
+                font-size: 0.95rem;
             }
         }
     }
