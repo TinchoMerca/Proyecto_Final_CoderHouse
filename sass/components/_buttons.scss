@@ -22,8 +22,8 @@ $botones: (
 @each $nombre, $valores in $botones {
     $color: list.nth($valores, 1); // primer valor -> color
     $scale: list.nth($valores, 2); // segundo valor -> escala
-    $shadow: list.nth($valores, 3); // tercer valor -> escala
-    $background: list.nth($valores, 4); // cuarto valor -> escala
+    $shadow: list.nth($valores, 3); // tercer valor -> sombra
+    $background: list.nth($valores, 4); // cuarto valor -> fondo
 
     .btn-#{$nombre} {
         @extend %btn-base;
@@ -34,7 +34,7 @@ $botones: (
         &:hover {
             background-color: $background;
             box-shadow: $shadow;
-            transform: scale($scale);
+            transform: scale($scale) !important;
         }
     }
 }

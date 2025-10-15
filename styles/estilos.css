@@ -163,7 +163,7 @@ main section {
 .btn-reservar:hover {
   background-color: rgba(36, 174, 126, 0.8);
   box-shadow: 0 0 14px #24ae7e;
-  transform: scale(1.15);
+  transform: scale(1.15) !important;
 }
 
 .btn-enviar {
@@ -174,7 +174,7 @@ main section {
 .btn-enviar:hover {
   background-color: rgba(36, 174, 126, 0.8);
   box-shadow: 0 0 5px #24ae7e;
-  transform: scale(1.01);
+  transform: scale(1.01) !important;
 }
 
 .btn-azul {
@@ -185,7 +185,7 @@ main section {
 .btn-azul:hover {
   background-color: rgba(0, 102, 204, 0.99);
   box-shadow: 0 0 10px #0066cc;
-  transform: scale(1.05);
+  transform: scale(1.05) !important;
 }
 
 .btn-celeste {
@@ -196,7 +196,7 @@ main section {
 .btn-celeste:hover {
   background-color: rgba(11, 94, 215, 0.9);
   box-shadow: 0 0 1px #0b5ed7;
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
 .btn-negro {
@@ -207,7 +207,7 @@ main section {
 .btn-negro:hover {
   background-color: rgba(51, 51, 51, 0.99);
   box-shadow: 0 0 1px #333;
-  transform: scale(1);
+  transform: scale(1) !important;
 }
 
 /* =========================
