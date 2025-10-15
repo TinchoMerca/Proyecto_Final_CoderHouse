@@ -34,7 +34,7 @@ $botones: (
         &:hover {
             background-color: $background;
             box-shadow: $shadow;
-            transform: scale($scale) !important;
+            transform: scale($scale);
         }
     }
 }
