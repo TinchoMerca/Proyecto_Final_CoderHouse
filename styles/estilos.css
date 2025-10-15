@@ -878,6 +878,13 @@ ESTILOS DE LA PÁGINA CONTACTO
   .galeria-departamento img {
     height: 320px;
   }
+  .servicio {
+    max-width: 280px;
+  }
+  .servicio .imagen-servicio {
+    aspect-ratio: 4/3;
+    /* más alto en pantallas medianas */
+  }
 }
 @media (max-width: 768px) {
   .portada {
@@ -889,13 +896,13 @@ ESTILOS DE LA PÁGINA CONTACTO
   }
   .seccion-servicios {
     flex-direction: column;
-    padding: 20px 10px;
+    align-items: center;
   }
   .servicio {
-    flex: 1 1 100%;
+    max-width: 90%;
   }
   .imagen-servicio img {
-    max-height: 300px;
+    aspect-ratio: 1/1;
   }
   .galeria-departamento {
     grid-template-columns: 1fr;
