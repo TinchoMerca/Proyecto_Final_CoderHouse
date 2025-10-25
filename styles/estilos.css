@@ -809,9 +809,6 @@ main .servicios-grid .servicio-card .galeria-card img {
 main .servicios-grid .servicio-card .galeria-card img:hover {
   transform: scale(1.03);
 }
-main .servicios-grid .servicio-card .dos-columnas {
-  grid-template-columns: repeat(2, 1fr);
-}
 main .servicios-grid .servicio-card .descripcion-card {
   font-size: 0.95rem;
   color: #333;
